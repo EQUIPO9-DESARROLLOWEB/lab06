@@ -1017,7 +1017,7 @@ button {
 }
 
 .contact__value--available {
-    color: #10b981;
+    color: white;
 }
 
 .contact__card {
@@ -1086,6 +1086,7 @@ button {
     /* ERROR 16: Los iconos de redes sociales del footer están apilados verticalmente
        PISTA: Falta la propiedad display que permite alinear elementos en fila */
     gap: var(--spacing-md);
+    display: flex;
 }
 
 .footer__social-link {
@@ -1100,6 +1101,7 @@ button {
     font-size: var(--font-size-lg);
     color: var(--color-text-secondary);
     transition: all var(--transition-base);
+    border-radius: 50%;
 }
 
 .footer__social-link:hover {
