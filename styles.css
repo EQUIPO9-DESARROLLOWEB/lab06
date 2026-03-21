@@ -585,6 +585,7 @@ button {
        SOLUCIÓN: Falta la transición para la propiedad transform
        Agregar: transition: transform var(--transition-base);
        El pseudoelemento ::before necesita su propia transición para animar el scaleX */
+       transition: transform var(--transition-base);
 }
 
 .interest__card:hover {
@@ -785,6 +786,7 @@ button {
    Los selectores específicos como --github necesitan definir su propio color */
 .social__icon--github {
     background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-primary);
 }
 
 .social__icon--email {
