@@ -1,45 +1,55 @@
-/* Estilos base del Header */
 .header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background-color: #ffffff; /* Ajusta al color de tu tarea 2 */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  z-index: var(--z-fixed);
+  transition: all var(--transition-base);
 }
 
 .nav {
-    height: 3.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-.nav__list {
-    display: flex;
-    column-gap: 2rem;
-    list-style: none;
+.nav_logo {
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
 }
 
-.nav__link {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
+.logo_bracket {
+  color: var(--color-primary);
 }
 
-.nav__link:hover {
-    color: #0070f3;
+.nav_list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
 }
 
-.nav__checkbox {
-    display: none;
+.nav_link {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
 }
 
-/* Estilo para que el logo resalte */
-.logo__bracket {
-    color: #0070f3;
-    font-weight: bold;
+.nav_link:hover {
+  color: var(--color-primary);
+}
+
+/* Ocultar checkbox de menú móvil por ahora */
+.nav_checkbox, .nav_toggle {
+  display: none;
 }

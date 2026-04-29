@@ -1,44 +1,33 @@
 import React from 'react';
 import styles from './Header.module.css';
+import Link from 'next/link';
 
-let HeaderData: string = 'cortes cortes bryan yael'; 
+let HeaderData: string = 'Cortes Cortes Bryan Yael';
 
 export default function Header() {
   return (
-    <header className="header" id="header">
-      <nav className="nav container">
-        <a href="#home" className="nav__logo">
-          <span className="logo__bracket">&lt;</span>
+    <header className={styles.header} id="header">
+      <nav className={styles.nav}>
+        <Link href="#home" className={styles.nav_logo}>
+          <span className={styles.logo_bracket}>&lt;</span>
           {HeaderData}
-          <span className="logo__bracket">/&gt;</span>
-        </a>
+          <span className={styles.logo_bracket}>/&gt;</span>
+        </Link>
 
-        <input type="checkbox" id="nav-toggle" className="nav__checkbox" />
+        {/* Checkbox para menú móvil (opcional para el diseño actual) */}
+        <input type="checkbox" id="nav-toggle" className={styles.nav_checkbox} />
         
-        <label htmlFor="nav-toggle" className="nav__toggle">
+        <label htmlFor="nav-toggle" className={styles.nav_toggle}>
           <i className="fas fa-bars"></i>
         </label>
 
-        {/* Agregamos el menú con la lista de navegación */}
-        <div className="nav__menu" id="nav-menu">
-          <ul className="nav__list">
-            <li className="nav__item">
-              <a href="#home" className="nav__link">Inicio</a>
-            </li>
-            <li className="nav__item">
-              <a href="#interests" className="nav__link">Intereses</a>
-            </li>
-            <li className="nav__item">
-              <a href="#cv" className="nav__link">CV</a>
-            </li>
-            <li className="nav__item">
-              <a href="#projects" className="nav__link">Proyectos</a>
-            </li>
-            <li className="nav__item">
-              <a href="#contact" className="nav__link">Contacto</a>
-            </li>
-          </ul>
-        </div>
+        <ul className={styles.nav_list}>
+          <li><Link href="#inicio" className={styles.nav_link}>Inicio</Link></li>
+          <li><Link href="#intereses" className={styles.nav_link}>Intereses</Link></li>
+          <li><Link href="#cv" className={styles.nav_link}>CV</Link></li>
+          <li><Link href="#proyectos" className={styles.nav_link}>Proyectos</Link></li>
+          <li><Link href="#contacto" className={styles.nav_link}>Contacto</Link></li>
+        </ul>
       </nav>
     </header>
   );
